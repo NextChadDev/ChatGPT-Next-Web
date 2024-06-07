@@ -1,0 +1,55 @@
+body:not(.null) {
+  --cls-1-fill: #eb6d81;
+  --cls-2-fill: #29327d;
+  --cls-3-fill: #70706f;
+  --cls-4-fill: url(#Nueva_muestra_de_degradado_15);
+  --fill-dark: #fff;
+
+  @media (prefers-color-scheme: dark) {
+    --cls-1-fill: var(--fill-dark);
+    --cls-2-fill: var(--fill-dark);
+    --cls-3-fill: var(--fill-dark);
+    --cls-4-fill: var(--fill-dark);
+  }
+
+  &.dark {
+    @media (prefers-color-scheme: dark) {
+      --cls-1-fill: var(--fill-dark);
+      --cls-2-fill: var(--fill-dark);
+      --cls-3-fill: var(--fill-dark);
+      --cls-4-fill: var(--fill-dark);
+    }
+  }
+}
+
+.cls-1 {
+  fill: var(--cls-1-fill);
+}
+
+.cls-1,
+.cls-2,
+.cls-3,
+.cls-4 {
+  stroke-width: 0px;
+}
+
+.cls-2 {
+  fill: var(--cls-2-fill);
+}
+
+.cls-3 {
+  fill: var(--cls-3-fill);
+}
+
+.cls-4 {
+  fill: var(--cls-4-fill);
+}
+
+.no_footer_text {
+  .main_text {
+    translate: 0 20%;
+  }
+  .footer_text {
+    display: none;
+  }
+}

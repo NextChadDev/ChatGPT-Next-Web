@@ -21,10 +21,10 @@
 
   &.primary {
     background-color: var(--primary);
-    color: white;
+    color: var(--color-on-primary);
 
-    path {
-      fill: white !important;
+    svg {
+      color: var(--color-on-primary);
     }
   }
 

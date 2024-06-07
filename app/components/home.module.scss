@@ -43,11 +43,16 @@
   box-sizing: border-box;
   padding: 20px;
   background-color: var(--second);
+  background-color: color-mix(in srgb, var(--primary) 8%, var(--gray));
   display: flex;
   flex-direction: column;
   box-shadow: inset -2px 0px 2px 0px rgb(0, 0, 0, 0.05);
   position: relative;
   transition: width ease 0.05s;
+
+  .logo {
+    width: 90%;
+  }
 
   .sidebar-header-bar {
     display: flex;
@@ -122,6 +127,10 @@
     height: var(--full-height);
     transition: all ease 0.3s;
     box-shadow: none;
+
+    .logo {
+      margin-inline: auto;
+    }
   }
 
   .sidebar-show {

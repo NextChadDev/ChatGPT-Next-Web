@@ -9,6 +9,7 @@ import { getClientConfig } from "../config/client";
 import { createPersistStore } from "../utils/store";
 import { ensure } from "../utils/clone";
 import { DEFAULT_CONFIG } from "./config";
+import { DEFAULT_MODEL } from "../consts/default-model";
 
 let fetchState = 0; // 0 not fetch, 1 fetching, 2 done
 
@@ -106,7 +107,7 @@ export const useAccessStore = createPersistStore(
           // Set default model from env request
           let defaultModel = res.defaultModel ?? "";
           DEFAULT_CONFIG.modelConfig.model =
-            defaultModel !== "" ? defaultModel : "gpt-3.5-turbo";
+            defaultModel !== "" ? defaultModel : DEFAULT_MODEL;
           return res;
         })
         .then((res: DangerConfig) => {

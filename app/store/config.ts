@@ -6,6 +6,7 @@ import {
   DEFAULT_SIDEBAR_WIDTH,
   StoreKey,
 } from "../constant";
+import { DEFAULT_MODEL } from "../consts/default-model";
 import { createPersistStore } from "../utils/store";
 
 export type ModelType = (typeof DEFAULT_MODELS)[number]["name"];
@@ -47,7 +48,7 @@ export const DEFAULT_CONFIG = {
   models: DEFAULT_MODELS as any as LLMModel[],
 
   modelConfig: {
-    model: "gpt-3.5-turbo" as ModelType,
+    model: DEFAULT_MODEL as ModelType,
     temperature: 0.5,
     top_p: 1,
     max_tokens: 4000,
