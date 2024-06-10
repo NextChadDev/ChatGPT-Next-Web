@@ -501,8 +501,8 @@
 }
 
 .chat-message-user > .chat-message-container > .chat-message-item {
-  background-color: color-mix(in srgb, var(--second) 30%, var(--gray));
-  border-color: color-mix(in srgb, var(--second) 60%, var(--gray));
+  background-color: var(--user-message-bg);
+  border-color: var(--user-message-outline);
 
   &:hover {
     min-width: 0;
